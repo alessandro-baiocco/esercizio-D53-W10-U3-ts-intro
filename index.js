@@ -41,4 +41,16 @@ var luigi = {
     genre: "platform",
     game: "superMarioBros",
 };
-//e possibile aggiungere più di una interfaces ad dato
+// è possibile anche se non si sa con certezza che valore ci sara usare un valore generics
+// grazie al Generic il tipo di "other" viene deciso al momento dell'utilizzo dell'interfaccia
+var clock1 = {
+    type: "digital",
+    material: "plastic",
+    other: null,
+};
+var clock2 = {
+    type: "analog",
+    material: "wood",
+    other: ["old", "used"],
+};
+//passiamo tramite il parametro il tipo di valore da usare

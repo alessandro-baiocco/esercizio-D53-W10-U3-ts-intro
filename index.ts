@@ -88,3 +88,26 @@ const luigi: person & game = {
 };
 
 //e possibile aggiungere più di una interfaces ad dato
+
+//generics
+interface cloks<T> {
+  type: string;
+  material: string;
+  other: T;
+}
+// è possibile anche se non si sa con certezza che valore ci sara usare un valore generics
+// grazie al Generic il tipo di "other" viene deciso al momento dell'utilizzo dell'interfaccia
+
+const clock1: cloks<null> = {
+  type: "digital",
+  material: "plastic",
+  other: null,
+};
+
+const clock2: cloks<string[]> = {
+  type: "analog",
+  material: "wood",
+  other: ["old", "used"],
+};
+
+//passiamo tramite il parametro il tipo di valore da usare
