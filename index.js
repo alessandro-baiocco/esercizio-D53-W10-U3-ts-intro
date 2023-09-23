@@ -115,16 +115,37 @@ var boundary = function (n1) {
    ritornare la stringa originale senza alterarla.
   */
 /* SCRIVI QUI LA TUA RISPOSTA */
+var epify = function (str) {
+    var str2 = str.split("");
+    if (str2[0].toLowerCase() !== "epicode") {
+        return "epicode" + " " + str;
+    }
+    else {
+        return str;
+    }
+};
 /* ESERCIZIO 6
    Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
    di 3 o di 7. (Suggerimento: usa l'operatore modulo)
   */
 /* SCRIVI QUI LA TUA RISPOSTA */
+var check3and7 = function (num) {
+    if (num % 3 === 0 || num % 7 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
 //---------------------------------------------------------
 /* ESERCIZIO 7
    Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
   */
 /* SCRIVI QUI LA TUA RISPOSTA */
+var reverseString = function (str) {
+    var arr = str.split("");
+    return arr.reverse().toString();
+};
 //-------------------------------------------------------------
 /* ESERCIZIO 8
    Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -135,8 +156,20 @@ var boundary = function (n1) {
    Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
    della stringa originale.
   */
+var cutString = function (str) {
+    return str.slice(1, -1);
+};
 /* SCRIVI QUI LA TUA RISPOSTA */
 /* ESERCIZIO 10
    Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
   */
+var numArr = [];
+var giveMeRandom = function (n) {
+    for (var i = 0; i < n; i++) {
+        var rand = Math.floor(Math.random() * 10);
+        numArr.push(rand);
+    }
+    console.log(numArr);
+};
+giveMeRandom(5);
 /* SCRIVI QUI LA TUA RISPOSTA */
